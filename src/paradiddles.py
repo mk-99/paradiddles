@@ -63,4 +63,10 @@ def start(message):
     bot.send_message(message.from_user.id, msg, parse_mode="HTML", reply_markup=markup)
 
 
-bot.polling(none_stop=True, interval=0)
+bot.polling(
+    non_stop=True,
+    skip_pending=True,
+    interval=1,
+)
+
+exit(1)

@@ -1,0 +1,13 @@
+# This compose.yaml runs container for bot
+services:
+  bot:
+    build: ./src
+    restart: unless-stopped
+    env_file:
+      - .env
+    networks:
+      - backend
+
+networks:
+  backend:
+    name: backend
